@@ -1,0 +1,30 @@
+{
+  "sources": {
+    "apt": {
+      "locked_version": "2.3.4"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "postgresql": {
+      "locked_version": "3.3.4"
+    },
+    "ruby_build": {
+      "locked_version": "0.8.0"
+    },
+    "chruby": {
+      "locked_version": "0.2.1",
+      "git": "https://github.com/Atalanta/chef-chruby",
+      "ref": "3c4488519b933b4f8bbf0fdb1426085fc85419cb"
+    },
+    "devenv": {
+      "path": "./cookbooks/devenv"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "ark": {
+      "locked_version": "0.4.2"
+    }
+  }
+}
