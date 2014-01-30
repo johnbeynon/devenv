@@ -13,6 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "precise32"
 
   config.berkshelf.enabled = true
+  config.omnibus.chef_version = :latest
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.

@@ -6,6 +6,8 @@ description      'Cookbook to manage your development environment'
 version          "0.0.1"
 
 depends "build-essential", "1.3.2"
-depends "postgresql", "2.1.1"
+depends "postgresql"
 depends "chruby"
 depends "ruby_build"
+depends "vim"
+depends "the_silver_searcher"

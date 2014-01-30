@@ -7,7 +7,9 @@
       "locked_version": "1.4.2"
     },
     "postgresql": {
-      "locked_version": "3.3.4"
+      "locked_version": "0.13.1",
+      "git": "https://github.com/phlipper/chef-postgresql",
+      "ref": "517e5331ddaa08aabf81deed64d0387b1f5c7a31"
     },
     "ruby_build": {
       "locked_version": "0.8.0"
@@ -17,11 +19,17 @@
       "git": "https://github.com/Atalanta/chef-chruby",
       "ref": "3c4488519b933b4f8bbf0fdb1426085fc85419cb"
     },
+    "vim": {
+      "locked_version": "1.1.2"
+    },
+    "the_silver_searcher": {
+      "locked_version": "1.3.6"
+    },
+    "chef-sugar": {
+      "locked_version": "1.1.0"
+    },
     "devenv": {
       "path": "./cookbooks/devenv"
-    },
-    "openssl": {
-      "locked_version": "1.1.0"
     },
     "ark": {
       "locked_version": "0.4.2"

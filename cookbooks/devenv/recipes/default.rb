@@ -20,3 +20,5 @@ end
 # Install Postgres
 include_recipe "postgresql::server"
 
+include_recipe "vim"
+include_recipe "the_silver_searcher"
