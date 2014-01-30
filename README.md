@@ -1,11 +1,15 @@
-# My Chef/Vagrant Development Environment
+## My Vagant/Chef development environment
 
-## Berkshelf 
+## Installs:
 
-I use Berkshelf for managing Chef dependencies
+* ruby_build - with Ruby 2.0.0-p353
+* ch_ruby
+* postgresql (9.3)
 
-http://berkshelf.com/
 
+## Actions:
+
+* postgres/password superuser
 
 ## Required Vagrant Plugins
 

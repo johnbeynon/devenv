@@ -20,5 +20,11 @@ end
 # Install Postgres
 include_recipe "postgresql::server"
 
+# create a user
+pg_user "john" do
+  privileges superuser: true, createdb: true, login: true
+  password "password"
+end
+
 include_recipe "vim"
 include_recipe "the_silver_searcher"
