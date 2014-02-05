@@ -31,8 +31,14 @@
     "devenv": {
       "path": "./cookbooks/devenv"
     },
+    "redisio": {
+      "locked_version": "1.7.0"
+    },
     "ark": {
       "locked_version": "0.4.2"
+    },
+    "ulimit": {
+      "locked_version": "0.3.2"
     }
   }
 }

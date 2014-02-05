@@ -28,3 +28,12 @@ end
 
 include_recipe "vim"
 include_recipe "the_silver_searcher"
+
+include_recipe "redisio::install"
+include_recipe "redisio::enable"
+
+# Clone dotfiles
+# https://github.com/johnbeynon/dotfiles
+
+#git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+#vim +BundleInstall +qall
