@@ -29,11 +29,55 @@ end
 include_recipe "vim"
 include_recipe "the_silver_searcher"
 
-include_recipe "redisio::install"
-include_recipe "redisio::enable"
+#include_recipe "redisio::install"
+#include_recipe "redisio::enable"
 
-# Clone dotfiles
-# https://github.com/johnbeynon/dotfiles
+git "/home/vagrant/dotfiles" do
+  repository "https://github.com/johnbeynon/dotfiles"
+  reference "master"
+  action :checkout
+  user "vagrant"
+  group "vagrant"
+end
 
-#git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-#vim +BundleInstall +qall
+
+link "/home/vagrant/.vim" do
+  to "/home/vagrant/dotfiles/vim"
+end
+
+link "/home/vagrant/.vimrc" do
+  to "/home/vagrant/dotfiles/vim/vimrc"
+end
+
+link "/home/vagrant/.ssh/id_rsa" do
+  to "/home/vagrant/sshkeys/id_rsa"
+  user "vagrant"
+  group "vagrant"
+end
+
+link "/home/vagrant/.ssh/id_rsa.pub" do
+  to "/home/vagrant/sshkeys/id_rsa.pub"
+  user "vagrant"
+  group "vagrant"
+end
+
+directory "/home/vagrant/.vim/bundle" do
+  action :create
+  user "vagrant"
+  group "vagrant"
+end
+
+git "/home/vagrant/.vim/bundle/vundle" do
+  repository "https://github.com/gmarik/vundle.git"
+  reference "master"
+  action :checkout
+  user "vagrant"
+  group "vagrant"
+end
+
+execute "vim +BundleInstall! +qall" do
+  user "vagrant"
+  action :run
+  environment ({'HOME' => '/home/vagrant', 'USER' => 'vagrant'})                                                             
+end
+
